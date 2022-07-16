@@ -1,7 +1,8 @@
+import datetime as dt
+
+from django.core.exceptions import ValidationError
 from django.db import models
 from users.models import User
-import datetime as dt
-from django.core.exceptions import ValidationError
 
 
 class Category(models.Model):
@@ -67,7 +68,7 @@ class Title(models.Model):
     def __str__(self):
         return self.name
 
-    def validate(year):
+    def validate(self, year):
         if dt.datetime.now().year <= year:
             raise ValidationError(
                 'Этот год еще не наступил!'
