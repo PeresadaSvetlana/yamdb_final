@@ -19,6 +19,8 @@ services:
       - db
     env_file:
       - ./.env
+    # environment:
+    #   - password=580808sVeTa
 
   nginx:
     image: nginx:1.21.3-alpine
