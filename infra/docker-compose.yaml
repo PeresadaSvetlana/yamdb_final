@@ -8,6 +8,8 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
       - ./.env
+    enviroment:
+       POSTGRIES_PASSWORD: postgres
   web:
     image: peresadasweet/yamdb_final:latest
     restart: always
