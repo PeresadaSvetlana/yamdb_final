@@ -13,11 +13,11 @@ Docker
 
 Клонировать репозиторий и перейти в него в командной строке:
 ```
-git@github.com:PeresadaSvetlana/infra_sp2.git
+git@github.com:PeresadaSvetlana/yamdb_final.git
 ```
 
 ```
-cd infra_sp2/infra/
+cd yamdb_final/infra/
 ```
 
 Собрать контейнеры и перезапустить их:
