@@ -39,10 +39,10 @@ docker-compose exec web python manage.py collectstatic --no-input
 
 ## **Некоторые примеры запросов к API.**
 
-http://localhost/api/v1/auth/signup/
+http://84.201.178.53/api/v1/auth/signup/
 
-http://localhost/api/v1/genres/
+http://84.201.178.53/api/v1/genres/
 
-http://localhost/api/v1/titles/{titles_id}/
+http://84.201.178.53/api/v1/titles/{titles_id}/
 
-http://localhost/api/v1/users/{username}/
+http://84.201.178.53/api/v1/users/{username}/
