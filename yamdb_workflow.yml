@@ -43,9 +43,10 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2 
         with:
+          context: api_yamdb
           push: true
           tags: peresadasweet/yamdb_final:latest
-          file: api_yamdb/Dockerfile
+          #file: api_yamdb/Dockerfile
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
@@ -58,8 +59,8 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker pull peresadasweet/yamdb_final:latest
-            sudo docker-compose stop
+            docker pull peresadasweet/yamdb_final
+            docker-compose stop
             sudo docker-compose rm web
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
