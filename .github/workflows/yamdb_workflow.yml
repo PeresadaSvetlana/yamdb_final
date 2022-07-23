@@ -61,6 +61,7 @@ jobs:
             docker pull peresadasweet/yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
+            y
             rm .env
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
